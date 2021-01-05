@@ -42,23 +42,31 @@ implementation 'com.shouzhong:ScannerIdCard2Lib:1.0.0'
 开启或者关闭某个识别器
 ```
 // 启用zxing识别器
-scannerView.setEnableZXing(true);
+scannerView.setEnableZXing(true)
+
 // 启用zbar识别器
-scannerView.setEnableZBar(true);
+scannerView.setEnableZBar(true)
+
 // 启用银行卡识别器
-scannerView.setEnableBankCard(true);
+scannerView.setEnableBankCard(true)
+
 // 启用身份证识别器（这里只支持2代身份证）
-scannerView.setEnableIdCard(true);
+scannerView.setEnableIdCard(true)
+
 // 启用车牌识别
-scannerView.setEnableLicensePlate(true);
+scannerView.setEnableLicensePlate(true)
+
 // 启用驾驶证识别
-scannerView.setEnableDrivingLicense(true);
+scannerView.setEnableDrivingLicense(true)
+
 // 启用身份证识别（第二种方式）
-scannerView.setEnableIdCard2(true);
+scannerView.setEnableIdCard2(true)
+
 ```
 如果你想自定义识别器
 ```
 scannerView.setScanner(new IScanner() {
+
     /**
      * 这里实现自己的识别器，并把识别结果返回
      *
@@ -68,11 +76,13 @@ scannerView.setScanner(new IScanner() {
      * @return
      * @throws Exception
      */
+     
     @Override
     public Result scan(byte[] data, int width, int height) throws Exception {
         // 如果你想转为Bitmap，请使用NV21.nv21ToBitmap(byte[] nv21, int width, int height)
         return null;
     }
+    
 });
 ```
 
