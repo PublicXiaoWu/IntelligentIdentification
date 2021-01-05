@@ -38,7 +38,7 @@ implementation 'com.shouzhong:ScannerDrivingLicenseLib:1.0.1'
 // 身份证识别（第二种方式）
 implementation 'com.shouzhong:ScannerIdCard2Lib:1.0.0'
 ```
-```
+
 开启或者关闭某个识别器
 ```
 // 启用zxing识别器
@@ -87,6 +87,7 @@ scannerView.setScanner(new IScanner() {
 ```
 
 ## 回调说明
+```
 
 Result
 
@@ -103,8 +104,10 @@ path | 保存的图片路径
 data | 数据
 ```
 // 以下是对data的说明
+```
 // 当type为TYPE_CODE，TYPE_BANK_CARD，TYPE_LICENSE_PLATE时，data为字符串
 // 当type为TYPE_ID_CARD_FRONT时，data为json字符串，格式如下
+
 {
 	"cardNumber": "21412412421",// 身份证号
 	"name": "张三",// 姓名
@@ -113,12 +116,17 @@ data | 数据
 	"birth": "1999-01-01",// 出生
 	"address": "地址"// 地址
 }
+
 // 当type为TYPE_ID_CARD_BACK时，data为json字符串，格式如下
+
 {
 	"organization": "签发机关",// 签发机关
 	"validPeriod": "20180101-20380101"// 有效期限
 }
+
+
 // 当type为TYPE_DRIVING_LICENSE时，data为json字符串，格式如下
+
 {
 	"cardNumber": "43623446432",// 证号
 	"name": "张三",// 姓名
@@ -130,6 +138,7 @@ data | 数据
 	"_class": "C1",// 准驾车型
 	"validPeriod": "20180101-20240101"// 有效期限
 }
+
 ```
 
 BankCardInfoBean
